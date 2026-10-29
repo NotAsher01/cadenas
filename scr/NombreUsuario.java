@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class NombreUsuario {
     public static void main(String[] args) {
         String nombre = "jUAN pérez LÓPEZ";
@@ -9,10 +7,23 @@ public class NombreUsuario {
             partes[i]=partes[i].substring(0,1).toUpperCase() +
                     partes[i].substring(1).toLowerCase();
         }
+
+        System.out.print("Nombre formateado: ");
         for(int i=0;i<partes.length;i++){
             System.out.print(partes[i] + " ");
         }
-        String nombre_formateado=partes[partes.length-1];
-        System.out.println("Nombre formateado: "+nombre_formateado);
+        System.out.println();
+
+        System.out.print("Iniciales: ");
+        for(int i=0;i<partes.length;i++){
+            System.out.print(partes[i].charAt(0) + ".");
+        }
+
+        System.out.println();
+        String usuario= partes[0].substring(0,1);
+        usuario += partes[1];
+        usuario += partes[2].substring(0,1);
+        usuario = usuario.toLowerCase();
+        System.out.println("Usuario: "+usuario);
     }
 }
