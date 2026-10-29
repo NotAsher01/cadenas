@@ -1,0 +1,2 @@
+public class cadenas1 {
+}
